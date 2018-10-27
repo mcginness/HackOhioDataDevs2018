@@ -46,7 +46,7 @@ def printPairs(song,name):
     pairList = fillPairs(song)
     sortedList = sorted(pairList, key= attrgetter('count'))
     sortedList.reverse()
-    outFile = open(name+"WordMap.txt","w")
+    outFile = open("counts/"+name+"WordMap.txt","w")
 
     for word in sortedList:
         outFile.write(word.word + " " +str(word.count) +" \n")
@@ -55,8 +55,8 @@ def printPairs(song,name):
 
 def pullWords(file):
         #creating file handlers
-        fileName = file+".txt"
-        outputFile = file+"Words.txt"
+        fileName = "lyrics/"+file+".txt"
+        outputFile = "lyrics/"+file+"Words.txt"
         
         readFile = open((fileName), "r")
         content = readFile.readlines()
