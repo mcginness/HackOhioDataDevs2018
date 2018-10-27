@@ -63,7 +63,7 @@ def getSongLyricsToTXT (song, artist):
     lyrics[0] = lyrics[0].text.strip()
 
     #creating txt file and writing song lyrics to txt file
-    lyricsFile = open(song+'-lyrics.txt', 'w')
+    lyricsFile = open('.\lyrics\\' +song+'-lyrics.txt', 'w')
     lyricsFile.write(lyrics[0])
     lyricsFile.close()
 
