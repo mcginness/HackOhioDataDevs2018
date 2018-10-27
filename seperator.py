@@ -3,10 +3,10 @@ class songs():
         self.title = title
         self.words = []
 
-    def pullWords(fileName,outputFile):
+    def pullWords(fileName):
         #creating file handlers
         fileName += ".txt"
-        outputFile += ".txt"
+        outputFile += "Words.txt"
         
         readFile = open((fileName), "r")
         content = readFile.readlines()
@@ -25,7 +25,7 @@ class songs():
                 song.words.append(word)
             
 
-    
+        #printing songs to the file
         printSong(song,outFile)
     
         #close handles
@@ -59,7 +59,7 @@ class songs():
                     
         return charList
         
-       
+
 """aa
 song = "reborn"
 outFile = "rebornWords"
