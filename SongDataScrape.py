@@ -7,6 +7,7 @@ import sys
 import matplotlib
 import requests
 import re
+from seperator import *
 
 
 def getChartsForDate(Month, Day, Year):
@@ -48,17 +49,15 @@ def getSongLyricsToTXT (song, artist):
     lyrics = songSoup.select('.lyrics')
     lyrics[0] = lyrics[0].text.strip()
 
-    lyricsFile = open(song+'lyrics.txt', 'w')
+    lyricsFile = open(song+'-lyrics.txt', 'w')
     lyricsFile.write(lyrics[0])
     lyricsFile.close()
 
-
-print(getChartsForDate("09", "12", "2012"))
+getSongLyricsToTXT("Sicko Mode", "Travis Scott")
+pullWords("Sicko-Mode-lyrics")
     
     
-    
-    
-
+getChartsForDate("10", "26", "2018")
 
 
 
