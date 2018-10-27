@@ -40,8 +40,8 @@ def fillPairs(song):
 
 def printPairs(song,name):
         
-    songReturn = pullWords(song)
-    pairList = fillPairs(songReturn)
+    
+    pairList = fillPairs(song)
 
     outFile = open(name+"WordMap.txt","w")
 
