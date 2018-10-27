@@ -55,9 +55,9 @@ def printPairs(song,name):
 
 def pullWords(file):
         #creating file handlers
-        
-        fileName = ".\lyrics" +file+".txt"
-        outputFile = ".\words"+file+"Words.txt"
+        slash = "\\"
+        fileName = '.\lyrics' +slash+ file+".txt"
+        outputFile = '.\words'+slash+file+"Words.txt"
         
         readFile = open((fileName), "r")
         content = readFile.readlines()
