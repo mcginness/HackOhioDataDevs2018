@@ -11,4 +11,4 @@ from seperator import *
 from SongDataScrape import*
 
 getSongLyricsToTXT("Rap God", "Eminem")
-printPairs(pullWords("Rap-God-lyrics"), "Rap God")
+printPairs(pullWords("\Rap-God-lyrics"), "\Rap God")
