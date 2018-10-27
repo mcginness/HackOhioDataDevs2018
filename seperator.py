@@ -3,7 +3,7 @@ class songs():
         self.title = title
         self.words = []
 
-    def pullWords(fileName):
+def pullWords(fileName):
         #creating file handlers
         fileName += ".txt"
         outputFile += "Words.txt"
@@ -33,11 +33,11 @@ class songs():
         outFile.close
         
 
-    def printSong(song,out):
+def printSong(song,out):
         for word in song.words:
             out.write(word)
 
-    def removeChars(word):
+def removeChars(word):
         
         #creating list of seperators 
         removingChars = "!@#$%^&*()_-+=;:\\\",<.>/?—[]"
