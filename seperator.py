@@ -45,7 +45,7 @@ def printPairs(song,name):
     
     pairList = fillPairs(song)
     sortedList = sorted(pairList, key= attrgetter('count'))
-
+    sortedList.reverse()
     outFile = open(name+"WordMap.txt","w")
 
     for word in sortedList:
