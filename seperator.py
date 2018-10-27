@@ -3,10 +3,10 @@ class songs():
         self.title = title
         self.words = []
 
-def pullWords(fileName):
+def pullWords(file):
         #creating file handlers
-        fileName += ".txt"
-        outputFile += "Words.txt"
+        fileName = file+".txt"
+        outputFile += file+"Words.txt"
         
         readFile = open((fileName), "r")
         content = readFile.readlines()
