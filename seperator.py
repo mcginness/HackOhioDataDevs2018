@@ -1,3 +1,5 @@
+from operator import attrgetter
+
 class songs():
     def __init__(self, title):
         self.title = title
@@ -42,13 +44,13 @@ def printPairs(song,name):
         
     
     pairList = fillPairs(song)
+    sortedList = sorted(pairList, key= attrgetter('count'))
 
     outFile = open(name+"WordMap.txt","w")
 
-    for word in pairList:
+    for word in sortedList:
         outFile.write(word.word + " " +str(word.count) +" \n")
     outFile.close()
-
 
 
 def pullWords(file):
