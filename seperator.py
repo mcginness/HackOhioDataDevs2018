@@ -6,7 +6,7 @@ class songs():
 def pullWords(file):
         #creating file handlers
         fileName = file+".txt"
-        outputFile += file+"Words.txt"
+        outputFile = file+"Words.txt"
         
         readFile = open((fileName), "r")
         content = readFile.readlines()
@@ -40,7 +40,7 @@ def printSong(song,out):
 def removeChars(word):
         
         #creating list of seperators 
-        removingChars = "!@#$%^&*()_-+=;:\\\",<.>/?—[]"
+        removingChars = "!@#$%^&*()_-+=;:\\\",<.>/?—"
         seperators = [] 
         for chars in removingChars:
             seperators.append(chars)
