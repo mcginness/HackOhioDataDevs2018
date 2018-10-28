@@ -7,7 +7,7 @@ import sys
 import matplotlib
 import requests
 import re
-from seperator import *
+from seperator import*
 
 #this function scrapes the web for the top 100 songs on a given day in history
 def getChartsForDate(Month, Day, Year):
@@ -50,11 +50,11 @@ def getChartsForDate(Month, Day, Year):
 def getSongLyricsToTXT (song, artist):
 
     #changing variables to append to weblink
-    song = song.replace(" ", "-")
-    artist = artist.replace(" ", "-")
+    songSearch = song.replace(" ", "-")
+    artistSearch = artist.replace(" ", "-")
     
     #gaining access to lyrics page
-    lyricPage = requests.get('https://genius.com/'+ artist + '-' + song +"-"+'lyrics')
+    lyricPage = requests.get('https://genius.com/'+ artistSearch + '-' + songSearch +"-"+'lyrics')
 
     #creating soup of page contents
     songSoup = BeautifulSoup(lyricPage.content, 'html.parser')
@@ -63,7 +63,8 @@ def getSongLyricsToTXT (song, artist):
     lyrics[0] = lyrics[0].text.strip()
 
     #creating txt file and writing song lyrics to txt file
-    lyricsFile = open('.\lyrics\\' +song+'-lyrics.txt', 'w')
+
+    lyricsFile = open(('.\lyrics\\'+artistSearch+"," +songSearch+'.txt').replace(" ",",").replace("-",","), 'w')
     lyricsFile.write(lyrics[0])
     lyricsFile.close()
 
