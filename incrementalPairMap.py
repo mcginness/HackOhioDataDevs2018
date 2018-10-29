@@ -1,3 +1,5 @@
+#author Jake O'Connor
+
 from removeChars import*
 class pair():
     def __init__(self,key,value):
